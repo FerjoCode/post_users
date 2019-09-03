@@ -27,4 +27,12 @@ export default class User {
     getUserPhoto(photoUrl) {
         this.photo = `${photoUrl}/${this.gender}/${this.name.split(" ")[0]}`;
     }
+
+    /**
+     *  Get the first user post
+     * @param {Object} posts
+     */
+    getUserFirstPost(posts) {
+        this.post = posts.filter(post => post.userId === this.id)[0];
+    }
 }

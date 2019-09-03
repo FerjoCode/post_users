@@ -87,6 +87,9 @@ const dataController = async () => {
     //Fetch and set initial data for Post and Users
     await setPosts();
     await setUsers();
+
+    // Get the first post of every user
+    state.users.forEach(user => user.getUserFirstPost(state.posts));
 };
 
 // Initialice functions on load
