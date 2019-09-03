@@ -1,6 +1,7 @@
 import Service from "./Modules/Service";
 import Post from "./Models/Post";
 import User from "./Models/User";
+import { userPostUI } from "./modules/Views";
 
 import * as config from "./config";
 
@@ -65,6 +66,21 @@ const setUsers = async () => {
             });
         });
     });
+};
+
+/**
+ * Display a given user in the DOM
+ *
+ * @param {string} selectorClass
+ * @param {Object} user
+ */
+
+const displayUI = (selectorClass, user) => {
+    // 1. Get the HTML selector
+    const selector = document.querySelector(`.${selectorClass}`);
+
+    // 2. Insert the html returned in userPostUI method in the DOM
+    selector.insertAdjacentHTML("beforeend", userPostUI(user));
 };
 
 const dataController = async () => {
