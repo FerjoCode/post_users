@@ -56,9 +56,11 @@ const setUsers = async () => {
 
         // 4. Get the user gender and photo
         state.users.forEach(async user => {
+            // 4.1 Get gender for every user
             await user.getUserGenderPhoto(config.apiUrlGender).then(gender => {
                 user.gender = gender.gender;
 
+                // 4.1.1 Get the user photo based on gender
                 user.getUserPhoto(config.apiUrlPhoto);
             });
         });
