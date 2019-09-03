@@ -28,6 +28,7 @@ export const userPostUI = user => {
 
 /**
  *  Return an array of sorted paragraph
+ *
  * @param {Array} paragrapths
  * @return {Array}
  */
