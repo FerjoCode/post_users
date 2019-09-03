@@ -9,7 +9,7 @@
         "build-prod": "webpack -p --mode production",
         "build-serve": "webpack-dev-server",
         "predeploy": "npm run build-prod",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d dist"
     },
     "repository": {
         "type": "git",
@@ -20,7 +20,7 @@
     "bugs": {
         "url": "https://github.com/FerjoCode/post_users/issues"
     },
-    "homepage": "https://github.com/FerjoCode/post_users/dist",
+    "homepage": "https://github.com/FerjoCode/post_users",
     "devDependencies": {
         "@babel/core": "^7.5.5",
         "@babel/plugin-transform-runtime": "^7.5.5",
