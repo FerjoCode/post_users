@@ -2,7 +2,13 @@
 
 ## Installation
 
--   ### Install dependencies using the command
+-   ### Play with the pen in Codepen.io
+
+
+    [1]: https://codepen.io/deucalion98/pen/wvwrLNR
+    [Users posts][1]
+
+-   ### Or install dependencies using the command
     -   `yarn` or `npm install`
 -   ### Run local server
 
