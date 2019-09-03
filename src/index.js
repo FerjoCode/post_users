@@ -87,6 +87,9 @@ const displayUI = (selectorClass, user) => {
     selector.insertAdjacentHTML("beforeend", userPostUI(user));
 };
 
+/**
+ * Set up user and posts
+ */
 const dataController = async () => {
     //Fetch and set initial data for Post and Users
     await setPosts();
