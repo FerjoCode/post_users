@@ -98,5 +98,3 @@ const dataController = async () => {
 
 // Initialice functions on load
 window.addEventListener("load", dataController);
-
-console.log(state);

@@ -2,6 +2,12 @@
  * Here you can export you html templates and markups to be rendered in the DOM
  */
 
+/**
+ * Get a user and return a markup to be rendered
+ *
+ * @param {Object} user
+ * @return {String}
+ */
 export const userPostUI = user => {
     const lines = user.post.body.split("\n");
     const sortedParagraphs = sortParagrapths(lines);
