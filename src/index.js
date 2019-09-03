@@ -63,6 +63,10 @@ const setUsers = async () => {
 
                 // 4.1.1 Get the user photo based on gender
                 user.getUserPhoto(config.apiUrlPhoto);
+
+                // 4.1.2 Display the post in the UI after setting photo
+
+                displayUI("posts-container", user);
             });
         });
     });

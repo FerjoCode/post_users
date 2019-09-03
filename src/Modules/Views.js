@@ -4,7 +4,10 @@
 
 export const userPostUI = user => {
     const lines = user.post.body.split("\n");
-    const paragraphs = lines.map(line => `<p class="post-content">${line}</p>`);
+    const sortedParagraphs = sortParagrapths(lines);
+    const paragraphs = sortedParagraphs.map(
+        line => `<p class="post-content">${line}</p>`
+    );
 
     return `<div class="post-wrapper" id="${user.id}">
             <figure class="post-header">
@@ -21,4 +24,15 @@ export const userPostUI = user => {
                 ${paragraphs.join("")}
             </div>
         </div>`;
+};
+
+/**
+ *  Return an array of sorted paragraph
+ * @param {Array} paragrapths
+ * @return {Array}
+ */
+const sortParagrapths = (paragrapths, type = "DESC") => {
+    return paragrapths.sort((a, b) => {
+        return type === "DESC" ? b.length - a.length : a.length - b.length;
+    });
 };
