@@ -6,4 +6,14 @@ export default class User {
         this.gender = "";
         this.post = {};
     }
+
+    async getUserGenderPhoto(genderUrl) {
+        return await fetch(
+            `${genderUrl}/?name=${this.name.split(" ")[0]}`
+        ).then(async response => await response.json());
+    }
+
+    getUserPhoto(photoUrl) {
+        this.photo = `${photoUrl}/${this.gender}/${this.name.split(" ")[0]}`;
+    }
 }

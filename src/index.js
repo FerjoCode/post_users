@@ -53,6 +53,15 @@ const setUsers = async () => {
                 })
             );
         });
+
+        // 4. Get the user gender and photo
+        state.users.forEach(async user => {
+            await user.getUserGenderPhoto(config.apiUrlGender).then(gender => {
+                user.gender = gender.gender;
+
+                user.getUserPhoto(config.apiUrlPhoto);
+            });
+        });
     });
 };
 
